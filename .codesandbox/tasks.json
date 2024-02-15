@@ -19,18 +19,15 @@
     },
     "build": {
       "name": "build",
-      "command": "yarn build",
-      "runAtStart": false
+      "command": "yarn build"
     },
     "start": {
       "name": "start",
-      "command": "yarn start",
-      "runAtStart": false
+      "command": "yarn start"
     },
     "post-update": {
       "name": "post-update",
-      "command": "yarn post-update",
-      "runAtStart": false
+      "command": "yarn post-update"
     }
   }
 }

@@ -9,9 +9,7 @@ export default function Home() {
     <div className="hero min-h-screen pb-8">
       <div className="hero-content text-center">
         <div className="max-w-2xl">
-          <h1 className="text-5xl font-bold uppercase py-2">
-            Lexington WEB3 Demo
-          </h1>
+          <h1 className="text-5xl font-bold uppercase py-2">Btab WEB3</h1>
           <h2 className="text-2xl uppercase py-2">Wallet Connect Web3Modal</h2>
           <div className="w-full">
             <div className="flex flex-wrap gap-4 justify-center mx-auto text-pretty">

@@ -1,3 +1,3 @@
-# LEXINGTON TECH
+# BTAB Wallet Connect
 
-## Wallet Connect V3 Web3Modal
+## Demo integrating Wallet Connect  WEB3Inbox

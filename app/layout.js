@@ -5,19 +5,19 @@ import Footer from "./components/footer";
 import "/styles/global.css";
 import "/styles/index.css";
 export const metadata = {
-  title: "Lexington WalletConnect Web3Modal Demo",
-  description: "Lexington Wallet Connect Web3Modal",
+  title: "Btab Wallet Connect",
+  description: "Btab Wallet Connect Web3Modal + Web3Inbox",
 };
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-      <Web3Modal>
-        <Providers>
-          <Header />
-          {children}
-          <Footer />
-        </Providers>
+        <Web3Modal>
+          <Providers>
+            <Header />
+            {children}
+            <Footer />
+          </Providers>
         </Web3Modal>
       </body>
     </html>
