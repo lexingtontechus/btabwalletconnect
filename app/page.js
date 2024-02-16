@@ -1,8 +1,18 @@
 "use client";
-import Link from "next/link";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
-
 import ContactForm from "./components/contactform";
+import {
+  usePrepareRegistration,
+  useRegister,
+  useSubscribe,
+  useSubscription,
+  useUnsubscribe,
+  useWeb3InboxAccount,
+  useWeb3InboxClient,
+} from "@web3inbox/react";
+import { useSignMessage, useAccount } from "wagmi";
+import Messages from "./messages";
+
 export default function Home() {
   const { open } = useWeb3Modal();
   return (

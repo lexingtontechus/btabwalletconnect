@@ -29,7 +29,7 @@ function Logo() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 312.5 305.0132340348881"
       preserveAspectRatio="xMidYMid meet"
-      className="size-12 p-1 stroke-2"
+      className="size-12 p-1 stroke-2 bg-emerald-500 mask mask-circle"
       width="312.5"
       height="305.0132340348881"
     >

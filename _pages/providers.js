@@ -5,7 +5,8 @@ import { createWeb3Modal, defaultWagmiConfig } from "@web3modal/wagmi/react";
 import { WagmiConfig } from "wagmi";
 import { arbitrum, mainnet } from "viem/chains";
 
-const projectId = process.env.projectID || "87491f051df9c49d7834ffc89cfd9dc7";
+const projectId =
+  process.env.NEXT_PUBLIC_PROJECT_ID || "87491f051df9c49d7834ffc89cfd9dc7";
 // 1. Get projectId at https://cloud.walletconnect.com
 
 // 2. Create wagmiConfig
