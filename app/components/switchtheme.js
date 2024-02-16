@@ -13,7 +13,7 @@ const ThemeChanger = () => {
 
   return (
     <div className="flex items-center swap swap-rotate">
-      {theme === "dim" ? (
+      {theme === "lemonade" ? (
         <button
           className="btn btn-sm btn-secondary mask mask-circle"
           onClick={() => setTheme("garden")}
@@ -24,7 +24,7 @@ const ThemeChanger = () => {
       ) : (
         <button
           className="btn btn-sm btn-secondary mask mask-circle"
-          onClick={() => setTheme("dim")}
+          onClick={() => setTheme("lemonade")}
         >
           <span className="sr-only">Light Mode</span>
           <svg

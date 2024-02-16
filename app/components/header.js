@@ -29,7 +29,7 @@ function Logo() {
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 312.5 305.0132340348881"
       preserveAspectRatio="xMidYMid meet"
-      className="size-12 btn btn-circle p-1 stroke-2"
+      className="size-12 p-1 stroke-2"
       width="312.5"
       height="305.0132340348881"
     >
@@ -59,7 +59,7 @@ function Logo() {
       >
         <g
           xmlns="http://www.w3.org/2000/svg"
-          fill-rule="evenodd"
+          fillRule="evenodd"
           fill='url("#SvgjsLinearGradient1641")'
         >
           <path

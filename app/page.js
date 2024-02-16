@@ -35,7 +35,7 @@ export default function Home() {
               </div>
 
               <div className="card w-96 bg-base-200 shadow-xl">
-                <figure className="p-2">
+                <figure className="p-2 bg-default">
                   <img
                     src="/logo_w3inbox.png"
                     alt="Web3 Inbox"
