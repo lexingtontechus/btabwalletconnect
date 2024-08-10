@@ -2,6 +2,6 @@
 import { ThemeProvider } from "next-themes";
 
 const Providers = ({ children }) => {
-  return <ThemeProvider defaultTheme="lemonade">{children}</ThemeProvider>;
+  return <ThemeProvider defaultTheme="acid">{children}</ThemeProvider>;
 };
 export default Providers;

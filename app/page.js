@@ -1,8 +1,10 @@
 "use client";
 import Link from "next/link";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
+import React, { useState, useEffect } from "react";
 
 import ContactForm from "./components/contactform";
+
 export default function Home() {
   const { open } = useWeb3Modal();
   return (
@@ -22,7 +24,7 @@ export default function Home() {
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title text-accent">Wallet Connect</h2>
+                  <h2 className="card-title text-primary">Wallet Connect</h2>
                   <p className="text-sm">
                     The communications protocol for web3, WalletConnect brings
                     the ecosystem together by enabling wallets and apps to
@@ -43,7 +45,7 @@ export default function Home() {
                   />
                 </figure>
                 <div className="card-body">
-                  <h2 className="card-title text-accent">Web3Inbox</h2>
+                  <h2 className="card-title text-primary">Web3Inbox</h2>
                   <p className="text-sm">
                     Get notifications from the apps you love From DAO proposals
                     to NFT drops, social updates to game requests — get

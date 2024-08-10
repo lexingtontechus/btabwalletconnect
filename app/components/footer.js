@@ -11,7 +11,7 @@ export default function Footer(props) {
             : "relative bg-primary-900 text-center mx-auto") + " pb-6"
         }
       >*/}
-      <div className="btm-nav py-4 bg-neutral">
+      <div className="btm-nav py-4 bg-inherit">
         <div className="container mx-auto px-4">
           <hr className="mb-6 border-b-1 border-primary-50" />
           <div className="flex flex-wrap items-center md:justify-between justify-center">
