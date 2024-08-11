@@ -2,10 +2,10 @@
 import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import dynamic from "next/dynamic";
-const Subscribe = dynamic(() => import("./Subscribe"), {
+const Subscribe = dynamic(() => import("../subscribe"), {
     ssr: false,
 });
-const FloatingInbox = dynamic(() => import("./FloatingInbox-hooks"), {
+const FloatingInbox = dynamic(() => import("../floatinginbox"), {
     ssr: false,
 });
 /*import Subscribe from "./Subscribe";
