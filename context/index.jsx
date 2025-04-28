@@ -1,41 +1,47 @@
-"use client"
+"use client";
 
-import React from "react"
-import { config, projectId, metadata } from "@/config"
+import { wagmiAdapter, projectId, networks } from "@/config";
+import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { createAppKit } from "@reown/appkit/react";
+import { cookieToInitialState, WagmiProvider } from "wagmi";
 
-import { createWeb3Modal } from "@web3modal/wagmi/react"
+// Set up queryClient
+const queryClient = new QueryClient();
 
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
+// Set up metadata
+const metadata = {
+  name: "BTAB WEB3 Demo",
+  description: "BTAB Reown Demo",
+  url: "https://btabwalletconnect.lexingtontech.us", // origin must match your domain & subdomain
+  icons: ["https://avatars.githubusercontent.com/u/179229932"],
+};
 
-import { WagmiProvider } from "wagmi"
+// Create the modal
+export const modal = createAppKit({
+  adapters: [wagmiAdapter],
+  projectId,
+  networks,
+  metadata,
+  themeMode: "light",
+  features: {
+    analytics: true, // Optional - defaults to your Cloud configuration
+  },
+  themeVariables: {
+    "--w3m-accent": "#000000",
+  },
+});
 
-// Setup queryClient
-const queryClient = new QueryClient()
+function ContextProvider({ children, cookies }) {
+  const initialState = cookieToInitialState(wagmiAdapter.wagmiConfig, cookies);
 
-if (!projectId) throw new Error("Project ID is not defined")
-
-// Create modal
-createWeb3Modal({
-    metadata,
-    wagmiConfig: config,
-    projectId,
-    includeWalletIds: [
-        //  '1ae92b26df02f0abca6304df07debccd18262fdf5fe82daa81593582dac9a369',
-        //  '4622a2b2d6af1c9844944291e5e7351a6aa24cd7b23099efac1b2fd875da31a0',
-        'c57ca95b47569778a828d19178114f4db188b89b763c899ba0be274e97267d96',//Metamask
-        'e7c4d26541a7fd84dbdfa9922d3ad21e936e13a7a0e44385d44f006139e44d3b',//WalletConnect
-        '8308656f4548bb81b3508afe355cfbb7f0cb6253d1cc7f998080601f838ecee3',//UD wallet
-        '74eaefb87aa72ed25c7380c355878a617e114250a894b8699fa8b36708e07420',//UD dapp
-        'fd20dc426fb37566d803205b19bbc1d4096b248ac04548e3cfb6b3a38bd033aa',//Coinbase
-        '1ae92b26df02f0abca6304df07debccd18262fdf5fe82daa81593582dac9a369',//Rainbow Wallet
-    ],
-    enableAnalytics: true // Optional - defaults to your Cloud configuration
-})
-
-export default function Web3ModalProvider({ children, initialState }) {
-    return (
-        <WagmiProvider config={config} initialState={initialState}>
-            <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
-        </WagmiProvider>
-    )
+  return (
+    <WagmiProvider
+      config={wagmiAdapter.wagmiConfig}
+      initialState={initialState}
+    >
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    </WagmiProvider>
+  );
 }
+
+export default ContextProvider;
