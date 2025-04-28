@@ -1,3 +1,3 @@
-# BTAB Wallet Connect
+# BTAB Demo Reown
 
-## Demo integrating Wallet Connect  WEB3Inbox
+## Demo integrating Reown
